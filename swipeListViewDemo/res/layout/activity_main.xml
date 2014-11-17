@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="vertical" 
+    xmlns:swipe="http://schemas.android.com/apk/res/com.example.zhy_swipelistview02">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.fortysevendeg.swipelistview.SwipeListView
+            android:id="@+id/id_swipelistview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            swipe:swipeActionLeft="reveal"
+            swipe:swipeBackView="@+id/id_back"
+            swipe:swipeCloseAllItemsWhenMoveList="true"
+            swipe:swipeFrontView="@+id/id_front"
+            swipe:swipeMode="left"
+            swipe:swipeOffsetLeft="200dip"
+            swipe:swipeOpenOnLongPress="false" />
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_launcher"
+            android:text="木有联系人"
+            android:textColor="#ffb7b7b7"
+            android:textSize="14.0sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <requestFocus />
+
+</LinearLayout>
